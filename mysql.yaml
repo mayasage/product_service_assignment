@@ -1,0 +1,23 @@
+services:
+        db:
+                image: mysql:8.4@sha256:0f775a92980b41c87c58f934a204de80431dd4d854057160ec1cb936663eabe9
+                container_name: mysql-8.4
+                restart: always
+                command: --lower_case_table_names=1
+                environment:
+                        MYSQL_USER: maya
+                        MYSQL_PASSWORD: blacksage
+                        MYSQL_ROOT_PASSWORD: blacksage
+                        MYSQL_DATABASE: product_service_assignment
+                volumes:
+                        - "mysql_data:/var/lib/mysql"
+                ports:
+                        - "3306:3306"
+
+volumes:
+        mysql_data:
+                driver: local
+                driver_opts:
+                        type: 'none'
+                        o: 'bind'
+                        device: 'X:/maya/docker/created_volumes/mysql'

@@ -1,0 +1,552 @@
+{
+	"info": {
+		"_postman_id": "1252ac6b-8ccf-4a18-810e-ab4f6282aea0",
+		"name": "product_service_assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33660352"
+	},
+	"item": [
+		{
+			"name": "get_product_services",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/product-service",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"product-service"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "specialKey",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/product-service?specialKey=hello",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"product-service"
+							],
+							"query": [
+								{
+									"key": "specialKey",
+									"value": "hello"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 17 Mar 2025 19:30:38 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"serviceId\": 1,\n        \"productId\": 1,\n        \"serviceName\": \"Writing\",\n        \"productName\": \"Pencil\"\n    },\n    {\n        \"serviceId\": 2,\n        \"productId\": 1,\n        \"serviceName\": \"Drawing\",\n        \"productName\": \"Pencil\"\n    },\n    {\n        \"serviceId\": 3,\n        \"productId\": 2,\n        \"serviceName\": \"Driving\",\n        \"productName\": \"Car\"\n    },\n    {\n        \"serviceId\": 4,\n        \"productId\": 2,\n        \"serviceName\": \"Racing\",\n        \"productName\": \"Car\"\n    },\n    {\n        \"serviceId\": 5,\n        \"productId\": 3,\n        \"serviceName\": \"Night Watching\",\n        \"productName\": \"Night Vision Goggles\"\n    },\n    {\n        \"serviceId\": 6,\n        \"productId\": 3,\n        \"serviceName\": \"Night Raiding\",\n        \"productName\": \"Night Vision Goggles\"\n    },\n    {\n        \"serviceId\": 7,\n        \"productId\": 4,\n        \"serviceName\": \"Lighting\",\n        \"productName\": \"Lamp\"\n    },\n    {\n        \"serviceId\": 8,\n        \"productId\": 4,\n        \"serviceName\": \"Decoration\",\n        \"productName\": \"Lamp\"\n    }\n]"
+				},
+				{
+					"name": "specialKeyWithProductId",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/product-service?specialKey=hello&productId=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"product-service"
+							],
+							"query": [
+								{
+									"key": "specialKey",
+									"value": "hello"
+								},
+								{
+									"key": "productId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 17 Mar 2025 19:32:30 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"serviceId\": 1,\n        \"productId\": 1,\n        \"serviceName\": \"Writing\",\n        \"productName\": \"Pencil\"\n    },\n    {\n        \"serviceId\": 2,\n        \"productId\": 1,\n        \"serviceName\": \"Drawing\",\n        \"productName\": \"Pencil\"\n    },\n    {\n        \"serviceId\": 3,\n        \"productId\": 2,\n        \"serviceName\": \"Driving\",\n        \"productName\": \"Car\"\n    },\n    {\n        \"serviceId\": 4,\n        \"productId\": 2,\n        \"serviceName\": \"Racing\",\n        \"productName\": \"Car\"\n    },\n    {\n        \"serviceId\": 5,\n        \"productId\": 3,\n        \"serviceName\": \"Night Watching\",\n        \"productName\": \"Night Vision Goggles\"\n    },\n    {\n        \"serviceId\": 6,\n        \"productId\": 3,\n        \"serviceName\": \"Night Raiding\",\n        \"productName\": \"Night Vision Goggles\"\n    },\n    {\n        \"serviceId\": 7,\n        \"productId\": 4,\n        \"serviceName\": \"Lighting\",\n        \"productName\": \"Lamp\"\n    },\n    {\n        \"serviceId\": 8,\n        \"productId\": 4,\n        \"serviceName\": \"Decoration\",\n        \"productName\": \"Lamp\"\n    }\n]"
+				},
+				{
+					"name": "productId",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/product-service?productId=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"product-service"
+							],
+							"query": [
+								{
+									"key": "productId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 17 Mar 2025 19:33:04 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"serviceId\": 1,\n        \"productId\": 1,\n        \"serviceName\": \"Writing\",\n        \"productName\": \"Pencil\"\n    },\n    {\n        \"serviceId\": 2,\n        \"productId\": 1,\n        \"serviceName\": \"Drawing\",\n        \"productName\": \"Pencil\"\n    }\n]"
+				},
+				{
+					"name": "noQueryParams",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/product-service",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"product-service"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 17 Mar 2025 19:33:26 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[]"
+				}
+			]
+		},
+		{
+			"name": "get_enrolled_product_services",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/product-service/enrolled",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"product-service",
+						"enrolled"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "specialKey",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/product-service/enrolled?specialKey=hello",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"product-service",
+								"enrolled"
+							],
+							"query": [
+								{
+									"key": "specialKey",
+									"value": "hello"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 17 Mar 2025 19:34:28 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"serviceId\": 1,\n        \"isEnrolled\": false,\n        \"productId\": 1,\n        \"serviceName\": \"Writing\",\n        \"productName\": \"Pencil\"\n    },\n    {\n        \"serviceId\": 2,\n        \"isEnrolled\": false,\n        \"productId\": 1,\n        \"serviceName\": \"Drawing\",\n        \"productName\": \"Pencil\"\n    },\n    {\n        \"serviceId\": 3,\n        \"isEnrolled\": false,\n        \"productId\": 2,\n        \"serviceName\": \"Driving\",\n        \"productName\": \"Car\"\n    },\n    {\n        \"serviceId\": 4,\n        \"isEnrolled\": false,\n        \"productId\": 2,\n        \"serviceName\": \"Racing\",\n        \"productName\": \"Car\"\n    },\n    {\n        \"serviceId\": 5,\n        \"isEnrolled\": false,\n        \"productId\": 3,\n        \"serviceName\": \"Night Watching\",\n        \"productName\": \"Night Vision Goggles\"\n    },\n    {\n        \"serviceId\": 6,\n        \"isEnrolled\": false,\n        \"productId\": 3,\n        \"serviceName\": \"Night Raiding\",\n        \"productName\": \"Night Vision Goggles\"\n    },\n    {\n        \"serviceId\": 7,\n        \"isEnrolled\": false,\n        \"productId\": 4,\n        \"serviceName\": \"Lighting\",\n        \"productName\": \"Lamp\"\n    },\n    {\n        \"serviceId\": 8,\n        \"isEnrolled\": false,\n        \"productId\": 4,\n        \"serviceName\": \"Decoration\",\n        \"productName\": \"Lamp\"\n    }\n]"
+				},
+				{
+					"name": "productId",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/product-service/enrolled?productId=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"product-service",
+								"enrolled"
+							],
+							"query": [
+								{
+									"key": "productId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 17 Mar 2025 19:35:04 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"serviceId\": 1,\n        \"isEnrolled\": false,\n        \"productId\": 1,\n        \"serviceName\": \"Writing\",\n        \"productName\": \"Pencil\"\n    },\n    {\n        \"serviceId\": 2,\n        \"isEnrolled\": false,\n        \"productId\": 1,\n        \"serviceName\": \"Drawing\",\n        \"productName\": \"Pencil\"\n    }\n]"
+				},
+				{
+					"name": "specialKeyWithProductId",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/product-service/enrolled?productId=1&specialKey=hello",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"product-service",
+								"enrolled"
+							],
+							"query": [
+								{
+									"key": "productId",
+									"value": "1"
+								},
+								{
+									"key": "specialKey",
+									"value": "hello"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 17 Mar 2025 19:35:31 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"serviceId\": 1,\n        \"isEnrolled\": false,\n        \"productId\": 1,\n        \"serviceName\": \"Writing\",\n        \"productName\": \"Pencil\"\n    },\n    {\n        \"serviceId\": 2,\n        \"isEnrolled\": false,\n        \"productId\": 1,\n        \"serviceName\": \"Drawing\",\n        \"productName\": \"Pencil\"\n    },\n    {\n        \"serviceId\": 3,\n        \"isEnrolled\": false,\n        \"productId\": 2,\n        \"serviceName\": \"Driving\",\n        \"productName\": \"Car\"\n    },\n    {\n        \"serviceId\": 4,\n        \"isEnrolled\": false,\n        \"productId\": 2,\n        \"serviceName\": \"Racing\",\n        \"productName\": \"Car\"\n    },\n    {\n        \"serviceId\": 5,\n        \"isEnrolled\": false,\n        \"productId\": 3,\n        \"serviceName\": \"Night Watching\",\n        \"productName\": \"Night Vision Goggles\"\n    },\n    {\n        \"serviceId\": 6,\n        \"isEnrolled\": false,\n        \"productId\": 3,\n        \"serviceName\": \"Night Raiding\",\n        \"productName\": \"Night Vision Goggles\"\n    },\n    {\n        \"serviceId\": 7,\n        \"isEnrolled\": false,\n        \"productId\": 4,\n        \"serviceName\": \"Lighting\",\n        \"productName\": \"Lamp\"\n    },\n    {\n        \"serviceId\": 8,\n        \"isEnrolled\": false,\n        \"productId\": 4,\n        \"serviceName\": \"Decoration\",\n        \"productName\": \"Lamp\"\n    }\n]"
+				},
+				{
+					"name": "noQueryParams",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/product-service/enrolled",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"product-service",
+								"enrolled"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 17 Mar 2025 19:35:58 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[]"
+				}
+			]
+		},
+		{
+			"name": "modify_enrolled_product_services",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"serviceId\": 1,\r\n        \"isEnrolled\": true,\r\n        \"productId\": 1\r\n    },\r\n    {\r\n        \"serviceId\": 2,\r\n        \"isEnrolled\": true,\r\n        \"productId\": 1\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/product-service/enrolled",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"product-service",
+						"enrolled"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "sample",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"serviceId\": 1,\r\n        \"isEnrolled\": true,\r\n        \"productId\": 1\r\n    },\r\n    {\r\n        \"serviceId\": 2,\r\n        \"isEnrolled\": true,\r\n        \"productId\": 1\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/product-service/enrolled",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"product-service",
+								"enrolled"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 17 Mar 2025 19:37:07 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		}
+	]
+}
